@@ -1,0 +1,14 @@
+Objetivo:
+    Criar um API para controle de produtos.
+
+    Model:
+          Funcionário: id, nomeCompleto, cpf, função, salario
+
+    Repository:
+          obterTodos, obterPorCpf, adicionar, atualizar, deletar
+
+    Service:
+          obterTodos, obterPorCpf, adicionar, atualizar, deletar
+
+    Controller:
+          obterTodos, obterPorCpf, adicionar, atualizar, deletar
