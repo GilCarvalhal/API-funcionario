@@ -5,10 +5,10 @@ Objetivo:
           Funcionário: id, nomeCompleto, cpf, função, salario
 
     Repository:
-          obterTodos, obterPorId, adicionar, atualizar, deletar
+          obterTodos, obterPorId, adicionar, deletar, atualizar
 
     Service:
-          obterTodos, obterPorId, adicionar, atualizar, deletar
+          obterTodos, obterPorId, adicionar, deletar, atualizar
 
     Controller:
-          obterTodos, obterPorId, adicionar, atualizar, deletar
+          obterTodos, obterPorId, adicionar, deletar, atualizar

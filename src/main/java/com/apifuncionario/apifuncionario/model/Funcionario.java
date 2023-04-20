@@ -2,18 +2,26 @@ package com.apifuncionario.apifuncionario.model;
 
 public class Funcionario {
 
-  private String id;
+  //#region Atributos
+  private Integer id;
 
   private String nomeCompleto;
 
   private String cpf;
 
-  private String funcao;
+  private String cargo;
 
   private Double salario;
 
-  public String getId() {
+  //#endregion
+
+  //#region Getters & Setters
+  public Integer getId() {
     return id;
+  }
+
+  public void setId(Integer id) {
+    this.id = id;
   }
 
   public String getNomeCompleto() {
@@ -32,12 +40,12 @@ public class Funcionario {
     this.cpf = cpf;
   }
 
-  public String getFuncao() {
-    return funcao;
+  public String getcargo() {
+    return cargo;
   }
 
-  public void setFuncao(String funcao) {
-    this.funcao = funcao;
+  public void setcargo(String cargo) {
+    this.cargo = cargo;
   }
 
   public Double getSalario() {
@@ -47,4 +55,5 @@ public class Funcionario {
   public void setSalario(Double salario) {
     this.salario = salario;
   }
+  //#endregion
 }
