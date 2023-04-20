@@ -24,7 +24,7 @@ public class FuncionarioRepository {
   }
 
   /**
-   * Metodo que retorna um produto encontrado pelo id
+   * Metodo que retorna um funcionário encontrado pelo id
    * @param id do funcionário que será localizado
    * @return Retorna um funcionário que será encontrado
    */
