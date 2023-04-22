@@ -1,13 +1,12 @@
 package com.apifuncionario.apifuncionario.repository;
 
+import com.apifuncionario.apifuncionario.model.Funcionario;
+import com.apifuncionario.apifuncionario.model.exception.ResourceNotFoundException;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Optional;
-
 import org.springframework.stereotype.Repository;
-
-import com.apifuncionario.apifuncionario.model.Funcionario;
 
 @Repository
 public class FuncionarioRepository {
@@ -63,7 +62,7 @@ public class FuncionarioRepository {
     // Achar funcionário
     Optional<Funcionario> acharFuncionario = obterPorId(funcionario.getId());
     if (acharFuncionario.isEmpty()) {
-      throw new InputMismatchException("Funcionário não encontrado");
+      throw new ResourceNotFoundException("Funcionário não encontrado");
     }
     // Deletar funcionário
     deletar(funcionario.getId());
