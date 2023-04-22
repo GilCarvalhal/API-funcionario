@@ -1,12 +1,13 @@
 package com.apifuncionario.apifuncionario.repository;
 
-import com.apifuncionario.apifuncionario.model.Funcionario;
-import com.apifuncionario.apifuncionario.model.exception.ResourceNotFoundException;
 import java.util.ArrayList;
-import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Optional;
+
 import org.springframework.stereotype.Repository;
+
+import com.apifuncionario.apifuncionario.model.Funcionario;
+import com.apifuncionario.apifuncionario.model.exception.ResourceNotFoundException;
 
 @Repository
 public class FuncionarioRepository {
