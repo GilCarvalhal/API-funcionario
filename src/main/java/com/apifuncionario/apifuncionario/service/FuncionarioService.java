@@ -20,7 +20,7 @@ public class FuncionarioService {
    * @return Retorna lista de funcionários
    */
   public List<Funcionario> obterTodos() {
-    return funcionarioRepository.obterTodos();
+    return funcionarioRepository.findAll();
   }
 
   /**
@@ -29,7 +29,7 @@ public class FuncionarioService {
    * @return Retorna o id dos funcionários
    */
   public Optional<Funcionario> obterPorId(Integer id) {
-    return funcionarioRepository.obterPorId(id);
+    return funcionarioRepository.findById(id);
   }
 
   /**
@@ -38,7 +38,9 @@ public class FuncionarioService {
    * @return Retorna um funcionário que foi adicionado
    */
   public Funcionario adicionar(Funcionario funcionario) {
-    return funcionarioRepository.adicionar(funcionario);
+    // Removendo o id para conseguir fazer o cadastro
+    funcionario.setId(null);
+    return funcionarioRepository.save(funcionario);
   }
 
   /**
@@ -46,7 +48,7 @@ public class FuncionarioService {
    * @param id do funcionário
    */
   public void deletar(Integer id) {
-    (funcionarioRepository).deletar(id);
+    (funcionarioRepository).deleteById(id);
   }
 
   /**
@@ -58,6 +60,6 @@ public class FuncionarioService {
   public Funcionario atualizar(Funcionario funcionario, Integer id) {
     funcionario.setId(id);
 
-    return funcionarioRepository.atualizar(funcionario);
+    return funcionarioRepository.save(funcionario);
   }
 }

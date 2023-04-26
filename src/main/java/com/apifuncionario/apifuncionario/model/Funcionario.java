@@ -1,8 +1,16 @@
 package com.apifuncionario.apifuncionario.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Funcionario {
 
   //#region Atributos
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
   private Integer id;
 
   private String nomeCompleto;
@@ -12,7 +20,6 @@ public class Funcionario {
   private String cargo;
 
   private Double salario;
-
   //#endregion
 
   //#region Getters & Setters
